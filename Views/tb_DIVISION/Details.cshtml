@@ -1,0 +1,34 @@
+﻿@model EmployeeManagement.Models.tb_DIVISION
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<table>
+    <tr>
+        <th>FullName</th>
+        <th>Gender</th>
+        <th>DateOfBirth</th>
+        <th>PhoneNumber</th>
+        <th>IdentityCard</th>
+        <th>Address</th>
+        <th>ProfilePicture</th>
+    </tr>
+    @foreach(var x in ViewBag.ds1)
+            {
+                <tr>
+                    <td>@x.FullName</td>
+                    <td>@x.Gender</td>
+                    <td>@x.DateOfBirth</td>
+                    <td>@x.PhoneNumber</td>
+                    <td>@x.IdentityCard</td>
+                    <td>@x.Address</td>
+                    <td>@x.ProfilePicture</td>
+                </tr>
+            }
+</table>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
